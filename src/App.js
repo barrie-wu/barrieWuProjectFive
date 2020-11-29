@@ -6,11 +6,18 @@ class App extends Component {
     return (
       <div className="App">
         <header>
-          <h1>fashion inspo</h1>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam laboriosam dolorum corporis debitis assumenda dicta soluta iure, adipisci, laudantium dolores impedit praesentium? Dolore cumque obcaecati quo corporis ex delectus voluptatum consequatur perspiciatis in minima eveniet labore repudiandae, eum voluptas nisi nulla facere nihil libero officia! Sint similique blanditiis suscipit, cupiditate iste eveniet id obcaecati? Exercitationem dolorem at nulla ab laudantium asperiores, eveniet veritatis commodi excepturi voluptatem nihil consequuntur distinctio. Alias sequi tempora quis voluptas aliquam repellendus, illum corporis beatae? Consequuntur dolor deleniti odit ex ab minus fugiat mollitia quam autem veritatis, culpa neque temporibus error iure tempora. Fugit, repellendus optio?</p>
-          <button className="startButton">get started</button>
+          <div className="insideWrapper headerContents">
+            <h1>fashion inspo.</h1>
+            <section className="aboutUs">
+              <blockquote>“Fashion has to reflect who you are, what you feel at the moment and where you’re going.”</blockquote><figcaption>– Pharrell Williams</figcaption>
+              <p className="aboutUsText">Welcome to my fashion inspiration gallery. Here you will find a carefully curated collection of fashion photography that will help with inspiring your next outfit. Simply click on the heart in the top-right corner of each image to save it to your own collection. To switch between your collection and the main collection, use the icon at the top-right of the main window. Press the "get looks" button to load the main gallery.</p>
+            </section>
+            <button className="startButton" tabindex="0">get looks</button>
+          </div>
         </header>
-        <div className="gallery"></div>
+        <main className="gallery">
+          <div className="wrapper"></div>
+        </main>
       </div>
     );
   }
