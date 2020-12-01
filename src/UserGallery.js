@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import firebase from './firebase.js';
-import { FaHeart, FaRegHeart } from 'react-icons/fa';
+import { FaHeartBroken } from 'react-icons/fa';
 
 class UserGallery extends Component {
     constructor() {
@@ -10,6 +10,7 @@ class UserGallery extends Component {
         }
     }
 
+    // get firebase database
     componentDidMount() {
         const dbRef = firebase.database().ref();
         // reference firebase DB
@@ -44,25 +45,28 @@ class UserGallery extends Component {
     
     render() {
         return(
-            <ul className="gallery">
-                {
-                    // map() through userImages array and render to user gallery
-                    this.state.userImages.map((image) => {
-                        return (
-                            <li key={image.imageProperties.id} className="galleryImage" onClick={ () => {this.removeImage(image.id)} }>
-                                <img src={image.imageProperties.imgPath} alt="" />
-                                <p className="imgFooter">
-                                    Photo by <a href={image.imageProperties.url} target="_blank" rel="noreferrer noopener">{image.imageProperties.author}</a>
-                                </p>
-                                <div className="banner">
-                                    <p className="likedText"></p>
-                                    <FaRegHeart className="hearts" />
-                                </div>
-                            </li>
-                        )
-                    })
-                }
-            </ul>
+            <div>
+                <h2>Likes Gallery</h2>
+                <ul className="gallery">
+                    {
+                        // map() through userImages array and render to user gallery
+                        this.state.userImages.map((image) => {
+                            return (
+                                <li key={image.id} className="galleryImage" onClick={ () => {this.removeImage(image.id)} }>
+                                    <img src={image.imageProperties.imgPath} alt="" />
+                                    <p className="imgFooter">
+                                        Photo by <a href={image.imageProperties.url} target="_blank" rel="noreferrer noopener">{image.imageProperties.author}</a>
+                                    </p>
+                                    <div className="banner">
+                                        <p className="likedText"></p>
+                                        <FaHeartBroken className="hearts" />
+                                    </div>
+                                </li>
+                            )
+                        })
+                    }
+                </ul>
+            </div>
         )
     }
 }

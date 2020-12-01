@@ -7,36 +7,46 @@ class MainGallery extends Component {
   constructor() {
     super();
     this.state = {
-
+      liked: false
     }
   }
 
   handleAddUserLike = (image) => {
     const dbRef = firebase.database().ref();
     dbRef.push(image);
-  }
+    this.setState({
+      liked: !this.state.liked
+    })
+  } 
 
   render() {
     return (
-      <ul className="gallery">
-        {
-          // map() through images array render to gallery
-          images.map((image) => {
-            return (
-              <li key={image.id} className="galleryImage" onClick={ () => {this.handleAddUserLike(image)} }>
-                <img src={image.imgPath} alt="" />
-                <p className="imgFooter">
-                  Photo by <a href={image.url} target="_blank" rel="noreferrer noopener">{image.author}</a>
-                </p>
-                <div className="banner">
-                  <p className="likedText"></p>
-                  <FaRegHeart className="hearts" />
-                </div>
-              </li>
-            )
-          })
-        }
-      </ul>
+      <div>
+        <h2>Main Gallery</h2>
+        <ul className="gallery">
+          {
+            // map() through images array render to gallery
+            images.map((image, i) => {
+              return (
+                <li key={image.id} className="galleryImage" onClick={() => { this.handleAddUserLike(image) }}>
+                  <img src={image.imgPath} alt="" />
+                  <div className="banner" tabIndex={i % 1}>
+                    <p className="likedText"></p>
+                    {
+                      this.state.liked === false 
+                        ? <FaRegHeart className="hearts" /> 
+                        : <FaHeart className="hearts" />
+                    }
+                  </div>
+                  <p className="imgFooter">
+                    Photo by <a href={image.url} target="_blank" rel="noreferrer noopener" tabIndex={i % 1}>{image.author}</a>
+                  </p>
+                </li>
+              )
+            })
+          }
+        </ul>
+      </div>
     )
   }
 }
