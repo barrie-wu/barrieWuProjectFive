@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import ImageList from './ImageList.js';
+import MainGallery from './MainGallery.js';
 import { Link } from 'react-scroll';
 import Footer from './Footer.js'
 import './App.css';
@@ -14,8 +14,8 @@ class App extends Component {
     }
   }
 
+  // SHOW GALLERY CLICK HANDLER
   handleShowLooks = () => {
-    console.log(this.state.looks)
     this.setState({
       looks: true
     })
@@ -34,14 +34,14 @@ class App extends Component {
             </section>
             <div className="startButtonContainer">
               <Link activeClass="active" to="gallery" spy={true} smooth={true}>
-                <button onClick={this.handleShowLooks} className="startButton" tabindex="0">get looks</button>
+                <button onClick={this.handleShowLooks} className="startButton" tabIndex="0">get looks</button>
               </Link>
             </div>
           </div>
         </header>
         <main id="gallery">
           <div className="insideWrapper">
-              {this.state.looks ? <ImageList /> : null}
+              {this.state.looks ? <MainGallery /> : null}
           </div>
         </main>
         <Footer />
