@@ -38,6 +38,7 @@ class UserGallery extends Component {
         })
     }
 
+    // function to remove item by id in firebase database
     removeImage = (imgId) => {
         const dbRef = firebase.database().ref();
         dbRef.child(imgId).remove();
@@ -45,15 +46,15 @@ class UserGallery extends Component {
     
     render() {
         return(
-            <div>
-                <h2>Likes Gallery</h2>
+            <div className="insideWrapper">
+            <h2>Likes Gallery</h2>
                 <ul className="gallery">
                     {
                         // map() through userImages array and render to user gallery
                         this.state.userImages.map((image) => {
                             return (
                                 <li key={image.id} className="galleryImage" onClick={ () => {this.removeImage(image.id)} }>
-                                    <img src={image.imageProperties.imgPath} alt="" />
+                                    <img src={image.imageProperties.imgPath} alt={image.imageProperties.altText} />
                                     <p className="imgFooter">
                                         Photo by <a href={image.imageProperties.url} target="_blank" rel="noreferrer noopener">{image.imageProperties.author}</a>
                                     </p>

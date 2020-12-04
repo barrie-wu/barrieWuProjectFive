@@ -1,47 +1,25 @@
 import { Component } from 'react';
 import images from './images.js';
-import firebase from './firebase.js'
-import { FaHeart, FaRegHeart } from 'react-icons/fa';
+import GalleryItem from './GalleryItem.js';
 
 class MainGallery extends Component {
-  constructor() {
+  constructor () {
     super();
     this.state = {
-      liked: false
+      mainGallery: images,
     }
   }
 
-  handleAddUserLike = (image) => {
-    const dbRef = firebase.database().ref();
-    dbRef.push(image);
-    this.setState({
-      liked: !this.state.liked
-    })
-  } 
-
   render() {
     return (
-      <div>
+      <div className="insideWrapper">
         <h2>Main Gallery</h2>
         <ul className="gallery">
           {
-            // map() through images array render to gallery
-            images.map((image, i) => {
+            // map shuffled gallery and return GalleryItem Component to handle each gallery item
+            this.state.mainGallery.map((image, i) => {
               return (
-                <li key={image.id} className="galleryImage" onClick={() => { this.handleAddUserLike(image) }}>
-                  <img src={image.imgPath} alt="" />
-                  <div className="banner" tabIndex={i % 1}>
-                    <p className="likedText"></p>
-                    {
-                      this.state.liked === false 
-                        ? <FaRegHeart className="hearts" /> 
-                        : <FaHeart className="hearts" />
-                    }
-                  </div>
-                  <p className="imgFooter">
-                    Photo by <a href={image.url} target="_blank" rel="noreferrer noopener" tabIndex={i % 1}>{image.author}</a>
-                  </p>
-                </li>
+                  <GalleryItem key={image.id} image={image} tabIndexId={i}/>
               )
             })
           }
@@ -52,3 +30,7 @@ class MainGallery extends Component {
 }
 
 export default MainGallery;
+
+
+
+              
