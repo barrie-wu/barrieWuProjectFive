@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/barrieWuProjectFive/static/css/main.87a0f072.chunk.css",
-    "main.js": "/barrieWuProjectFive/static/js/main.2ab58648.chunk.js",
-    "main.js.map": "/barrieWuProjectFive/static/js/main.2ab58648.chunk.js.map",
+    "main.css": "/barrieWuProjectFive/static/css/main.a7a89b8a.chunk.css",
+    "main.js": "/barrieWuProjectFive/static/js/main.5b2c7dd2.chunk.js",
+    "main.js.map": "/barrieWuProjectFive/static/js/main.5b2c7dd2.chunk.js.map",
     "runtime-main.js": "/barrieWuProjectFive/static/js/runtime-main.ad2bb77e.js",
     "runtime-main.js.map": "/barrieWuProjectFive/static/js/runtime-main.ad2bb77e.js.map",
-    "static/js/2.fbb2429d.chunk.js": "/barrieWuProjectFive/static/js/2.fbb2429d.chunk.js",
-    "static/js/2.fbb2429d.chunk.js.map": "/barrieWuProjectFive/static/js/2.fbb2429d.chunk.js.map",
+    "static/js/2.d1af1bb3.chunk.js": "/barrieWuProjectFive/static/js/2.d1af1bb3.chunk.js",
+    "static/js/2.d1af1bb3.chunk.js.map": "/barrieWuProjectFive/static/js/2.d1af1bb3.chunk.js.map",
     "static/js/3.0d7e471a.chunk.js": "/barrieWuProjectFive/static/js/3.0d7e471a.chunk.js",
     "static/js/3.0d7e471a.chunk.js.map": "/barrieWuProjectFive/static/js/3.0d7e471a.chunk.js.map",
     "index.html": "/barrieWuProjectFive/index.html",
-    "static/css/main.87a0f072.chunk.css.map": "/barrieWuProjectFive/static/css/main.87a0f072.chunk.css.map",
-    "static/js/2.fbb2429d.chunk.js.LICENSE.txt": "/barrieWuProjectFive/static/js/2.fbb2429d.chunk.js.LICENSE.txt",
-    "static/media/f001.d736405d.jpg": "/barrieWuProjectFive/static/media/f001.d736405d.jpg",
-    "static/media/f002.0d15363f.jpg": "/barrieWuProjectFive/static/media/f002.0d15363f.jpg",
-    "static/media/f003.5d07e924.jpg": "/barrieWuProjectFive/static/media/f003.5d07e924.jpg",
+    "static/css/main.a7a89b8a.chunk.css.map": "/barrieWuProjectFive/static/css/main.a7a89b8a.chunk.css.map",
+    "static/js/2.d1af1bb3.chunk.js.LICENSE.txt": "/barrieWuProjectFive/static/js/2.d1af1bb3.chunk.js.LICENSE.txt",
+    "static/media/f001.81d4e621.jpg": "/barrieWuProjectFive/static/media/f001.81d4e621.jpg",
+    "static/media/f002.abee6af6.jpg": "/barrieWuProjectFive/static/media/f002.abee6af6.jpg",
+    "static/media/f003.66fc84bd.jpg": "/barrieWuProjectFive/static/media/f003.66fc84bd.jpg",
     "static/media/f004.d675cd39.jpg": "/barrieWuProjectFive/static/media/f004.d675cd39.jpg",
     "static/media/f005.23156545.jpg": "/barrieWuProjectFive/static/media/f005.23156545.jpg",
     "static/media/f006.552a1c63.jpg": "/barrieWuProjectFive/static/media/f006.552a1c63.jpg",
@@ -39,12 +39,15 @@
     "static/media/f025.c3f7bb32.jpg": "/barrieWuProjectFive/static/media/f025.c3f7bb32.jpg",
     "static/media/f026.b3df7bd5.jpg": "/barrieWuProjectFive/static/media/f026.b3df7bd5.jpg",
     "static/media/f027.f6fca2b5.jpg": "/barrieWuProjectFive/static/media/f027.f6fca2b5.jpg",
+    "static/media/f028.160ee694.jpg": "/barrieWuProjectFive/static/media/f028.160ee694.jpg",
+    "static/media/f029.1b01bda1.jpg": "/barrieWuProjectFive/static/media/f029.1b01bda1.jpg",
+    "static/media/f030.a0f29ff1.jpg": "/barrieWuProjectFive/static/media/f030.a0f29ff1.jpg",
     "static/media/App.css": "/barrieWuProjectFive/static/media/headerBackground.97e574d6.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.ad2bb77e.js",
-    "static/js/2.fbb2429d.chunk.js",
-    "static/css/main.87a0f072.chunk.css",
-    "static/js/main.2ab58648.chunk.js"
+    "static/js/2.d1af1bb3.chunk.js",
+    "static/css/main.a7a89b8a.chunk.css",
+    "static/js/main.5b2c7dd2.chunk.js"
   ]
 }
