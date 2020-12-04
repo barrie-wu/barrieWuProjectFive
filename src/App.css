@@ -38,6 +38,12 @@ a {
   width: 80%;
 }
 
+.outisdeWrapper {
+  max-width: 2000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
 
 
 /* GLOBAL TYPOGRAPHY */
@@ -71,6 +77,7 @@ header {
   height: 95vh;
 }
 
+/* TOGGLE ICON STYLES */
 .galleryToggleButton {
   cursor: pointer;
   font-size: 5rem;
@@ -82,6 +89,7 @@ header {
   right: 30px;
 }
 
+/* HEADER TEXT ELEMENT STYLES */
 .headerContents {
   display: flex;
   flex-direction: column;
@@ -100,11 +108,30 @@ h1 {
   margin: 2.5% 35% 0 0;
 }
 
+blockquote {
+  text-align: center;
+  margin: 0 auto;
+  font-style: italic;
+  width: 50%;
+}
+
+figcaption {
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center; 
+  width: 50%;
+  margin: 10px auto 0;
+}
+
 .aboutUs {
   font-size: 2rem;
   padding:30px;
   background-color: rgba(255,255,255,0.75);
   border-radius: 10px;
+}
+
+.aboutUsText {
+  margin-top: 30px;
 }
 
 .aboutUsIcon {
@@ -129,28 +156,10 @@ h1 {
   align-self: flex-end;
 }
 
+/* HOVER/FOCUS STATES ON 'get looks' BUTTON */
 .startButton:hover, 
 .startButton:focus {
   background: black;
-}
-
-blockquote {
-  text-align: center;
-  margin: 0 auto;
-  font-style: italic;
-  width: 50%;
-}
-
-figcaption {
-  margin-top: 10px;
-  font-weight: bold;
-  text-align: center; 
-  width: 50%;
-  margin: 10px auto 0;
-}
-
-.aboutUsText {
-  margin-top: 30px;
 }
 
 
@@ -168,6 +177,7 @@ h2 {
   padding-top: 50px;
 }
 
+/* GALLERY STYLES */
 .gallery {
   display: flex;
   flex-direction: row;
@@ -176,6 +186,7 @@ h2 {
   padding: 25px 0 50px;
 }
 
+/* GALLERY ITEMS STYLES */
 .galleryImage {
   list-style: none;
   width: 32%;
@@ -201,7 +212,8 @@ img {
   padding: 5px;
 }
 
-.banner {
+/* GALLERY ITEM OVERLAY STYLES */
+.imageOverlay {
   padding: 0 20px;
   position: absolute;
   top: 0;
@@ -216,21 +228,14 @@ img {
   transition: all 0.3s;
 }
 
-.banner:hover,
-.banner:focus {
+.imageOverlay:hover,
+.imageOverlay:focus {
   opacity: 1;
 }
 
 .hearts {
   font-size: 6rem;
   color: red;
-}
-
-.likedText {
-  letter-spacing: 5px;
-  font-size: 3rem;
-  font-family: 'Cardo', serif;
-  color: white;
 }
 
 
@@ -247,7 +252,6 @@ footer {
 footer p {
   color: white;
 }
-
 
 
 
@@ -321,7 +325,6 @@ footer p {
     .galleryImage {
     width: 100%;
   }
-
-
+  
 }
 

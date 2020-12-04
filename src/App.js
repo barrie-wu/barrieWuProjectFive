@@ -34,7 +34,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="outisdeWrapper">
         <header>
           {/* click handler on profile icon to switch between main and user gallery */}
           <FaRegAddressCard className="galleryToggleButton" onClick={this.handleToggleGallery}/>

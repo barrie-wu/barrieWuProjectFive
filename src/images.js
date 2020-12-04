@@ -240,8 +240,6 @@ const images = [
         altText: "woman wearing an emerald green, furry jacket, holding a black purse",
         url: "https://www.pexels.com/@evgphotos"
     },
-    
-
 ]
 
 export default images;

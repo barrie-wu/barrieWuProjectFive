@@ -10,6 +10,7 @@ class GalleryItem extends Component {
         }
     }
 
+    // click handler to add to firebase database
     handleAddUserLike = (image) => {
         const dbRef = firebase.database().ref();
         dbRef.push(image);
@@ -18,13 +19,12 @@ class GalleryItem extends Component {
         })
     } 
 
-    
-
     render() {
         return(
             <li className="galleryImage" onClick={() => { this.handleAddUserLike(this.props.image) }}>
                 <img src={this.props.image.imgPath} alt={this.props.image.altText} />
-                <div className="banner" tabIndex={this.props.tabIndexId % 1}>
+                <div className="imageOverlay" tabIndex={this.props.tabIndexId % 1}>
+                    {/* add/remove heart icon */}
                     {
                         this.state.liked
                             ? <FaHeart className="hearts" />

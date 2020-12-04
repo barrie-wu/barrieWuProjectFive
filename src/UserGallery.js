@@ -58,7 +58,7 @@ class UserGallery extends Component {
                                     <p className="imgFooter">
                                         Photo by <a href={image.imageProperties.url} target="_blank" rel="noreferrer noopener">{image.imageProperties.author}</a>
                                     </p>
-                                    <div className="banner">
+                                    <div className="imageOverlay">
                                         <p className="likedText"></p>
                                         <FaHeartBroken className="hearts" />
                                     </div>
